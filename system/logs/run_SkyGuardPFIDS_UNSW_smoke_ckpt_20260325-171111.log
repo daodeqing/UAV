@@ -1,0 +1,83 @@
+[2026-03-25 17:11:11] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_SkyGuardPFIDS_UNSW_smoke_ckpt_20260325-171111.log
+[2026-03-25 17:11:11] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_SkyGuardPFIDS_UNSW_smoke_ckpt_20260325-171111.csv
+[2026-03-25 17:11:11] 
+[2026-03-25 17:11:11] ============= Running time: 0th =============
+[2026-03-25 17:11:11] Creating server and clients ...
+[2026-03-25 17:11:11] CNN1D(
+[2026-03-25 17:11:11]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-25 17:11:11]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-25 17:11:11]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-25 17:11:11]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-25 17:11:11]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-25 17:11:11]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-25 17:11:11] )
+[2026-03-25 17:11:11] 
+[2026-03-25 17:11:11] Join ratio / total clients: 1.0 / 3
+[2026-03-25 17:11:11] Finished creating server and clients.
+[2026-03-25 17:11:12] 
+[2026-03-25 17:11:12] -------------Round number: 0-------------
+[2026-03-25 17:11:12] 
+[2026-03-25 17:11:12] Evaluate personalized models
+[2026-03-25 17:11:13] Averaged Train Loss: 2.3664
+[2026-03-25 17:11:13] Averaged Test Accuracy: 0.0625
+[2026-03-25 17:11:13] Macro-F1: 0.0206
+[2026-03-25 17:11:13] Weighted-F1: 0.0942
+[2026-03-25 17:11:13] Balanced Accuracy: 0.0152
+[2026-03-25 17:11:13] MCC: -0.0105
+[2026-03-25 17:11:13] Cohen-Kappa: -0.0069
+[2026-03-25 17:11:13] Micro AUC: 0.4793
+[2026-03-25 17:11:13] Macro AUC: 0.0000
+[2026-03-25 17:11:13] Macro PR-AUC: 0.0957
+[2026-03-25 17:11:13] Micro FPR: 0.1042
+[2026-03-25 17:11:13] ECE: 0.0839
+[2026-03-25 17:11:13] Brier Score: 0.9102
+[2026-03-25 17:11:13] Average Confidence: 0.1417
+[2026-03-25 17:11:13] EMA Test Accuracy: 0.0625
+[2026-03-25 17:11:13] Few-shot Recall: 0.0000
+[2026-03-25 17:11:13] Few-shot Macro-F1: 0.0000
+[2026-03-25 17:11:13] Selection Score (multi_objective): -0.0196
+[2026-03-25 17:11:13] Checkpoint Updated: round 0
+[2026-03-25 17:11:15] ------------------------- time cost ------------------------- 3.144721746444702
+[2026-03-25 17:11:15] [Round Metrics][SGEFIDSUS], selected=3, active=3, winners=1, uploaded=2, failover_used=1, contracts=1, contract_active=0.3333, contract_upload=1.0000, upload_success=1.0000, upload_per_winner=2.0000, mode_full=1.0000, mode_freeze=0.0000, mode_head=0.0000, affinity_update_ratio=0.3333, mean_delta_norm=0.194401, mean_delta_sparsity=0.4262, mean_bid=0.731163, mean_entropy=1.8010, mean_cred=0.5944, rep_mean=1.0017, staleness_mean=0.6667, staleness_max=1, price_compute=1.000, price_comm=1.000, avg_train_time=0.7814s, avg_send_time=0.0020s, total_upload_bytes=47128, selection_score=-0.0196
+[2026-03-25 17:11:15] [Proto Metrics][SGEFIDSUS] global_proto_classes=10, global_proto_samples=11218, few_shot_classes=4, client_few_shot_ratio=0.0141
+[2026-03-25 17:11:15] [SkyGuard Metrics] participation_mean=0.9606, participation_std=0.0274, uav_utility=0.7312, shapley_proxy=0.9715, grad_similarity=0.0000, data_quality=0.5187, resource_score=0.7059, attack_score=0.4954, adapter_drift=0.002099, global_drift_pressure=0.0000, drift_alert_ratio=0.0000, clusters=1
+[2026-03-25 17:11:15] 
+[2026-03-25 17:11:15] -------------Round number: 1-------------
+[2026-03-25 17:11:15] 
+[2026-03-25 17:11:15] Evaluate personalized models
+[2026-03-25 17:11:16] Averaged Train Loss: 1.8168
+[2026-03-25 17:11:16] Averaged Test Accuracy: 0.5581
+[2026-03-25 17:11:16] Macro-F1: 0.1556
+[2026-03-25 17:11:16] Weighted-F1: 0.5315
+[2026-03-25 17:11:16] Balanced Accuracy: 0.2483
+[2026-03-25 17:11:16] MCC: 0.4203
+[2026-03-25 17:11:16] Cohen-Kappa: 0.3786
+[2026-03-25 17:11:16] Micro AUC: 0.8724
+[2026-03-25 17:11:16] Macro AUC: 0.0000
+[2026-03-25 17:11:16] Macro PR-AUC: 0.2223
+[2026-03-25 17:11:16] Micro FPR: 0.0491
+[2026-03-25 17:11:16] ECE: 0.3433
+[2026-03-25 17:11:16] Brier Score: 0.7503
+[2026-03-25 17:11:16] Average Confidence: 0.2179
+[2026-03-25 17:11:16] EMA Test Accuracy: 0.1616
+[2026-03-25 17:11:16] Few-shot Recall: 0.2000
+[2026-03-25 17:11:16] Few-shot Macro-F1: 0.0833
+[2026-03-25 17:11:16] Selection Score (multi_objective): 0.2375
+[2026-03-25 17:11:16] Checkpoint Updated: round 1
+[2026-03-25 17:11:18] ------------------------- time cost ------------------------- 2.938683271408081
+[2026-03-25 17:11:18] [Round Metrics][SGEFIDSUS], selected=3, active=2, winners=1, uploaded=2, failover_used=1, contracts=1, contract_active=0.5000, contract_upload=1.0000, upload_success=1.0000, upload_per_winner=2.0000, mode_full=1.0000, mode_freeze=0.0000, mode_head=0.0000, affinity_update_ratio=0.5000, mean_delta_norm=0.209259, mean_delta_sparsity=0.2874, mean_bid=0.762078, mean_entropy=1.6523, mean_cred=0.4941, rep_mean=1.0033, staleness_mean=0.6667, staleness_max=1, price_compute=1.000, price_comm=1.000, avg_train_time=0.7068s, avg_send_time=0.0027s, total_upload_bytes=45568, selection_score=0.2375
+[2026-03-25 17:11:18] [Proto Metrics][SGEFIDSUS] global_proto_classes=10, global_proto_samples=6797, few_shot_classes=6, client_few_shot_ratio=0.0211
+[2026-03-25 17:11:18] [SkyGuard Metrics] participation_mean=0.9475, participation_std=0.0232, uav_utility=0.7621, shapley_proxy=0.6486, grad_similarity=0.7352, data_quality=0.5523, resource_score=0.7058, attack_score=0.5238, adapter_drift=0.001541, global_drift_pressure=0.4693, drift_alert_ratio=0.0000, clusters=1
+[2026-03-25 17:11:18] 
+[2026-03-25 17:11:18] Best accuracy.
+[2026-03-25 17:11:18] 0.5580500320718409
+[2026-03-25 17:11:18] 
+[2026-03-25 17:11:18] Average time cost per round.
+[2026-03-25 17:11:18] 2.938683271408081
+[2026-03-25 17:11:18] File path: ../results/UNSW_SkyGuardPFIDS_smoke_ckpt_0.h5
+[2026-03-25 17:11:18] 
+[2026-03-25 17:11:18] Average time cost: 7.11s.
+[2026-03-25 17:11:18] Length:  2
+[2026-03-25 17:11:18] std for best rs_test_acc: 0.0
+[2026-03-25 17:11:18] mean for best rs_test_acc: 0.5580500320718409
+[2026-03-25 17:11:18] All done!

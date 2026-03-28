@@ -1,0 +1,54 @@
+[2026-03-20 15:19:15] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_HGFIDSUS_UNSW_smoke_patch50_20260320-151915.log
+[2026-03-20 15:19:15] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_HGFIDSUS_UNSW_smoke_patch50_20260320-151915.csv
+[2026-03-20 15:19:15] 
+[2026-03-20 15:19:15] ============= Running time: 0th =============
+[2026-03-20 15:19:15] Creating server and clients ...
+[2026-03-20 15:19:15] CNN1D(
+[2026-03-20 15:19:15]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-20 15:19:15]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-20 15:19:15]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-20 15:19:15]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-20 15:19:15]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-20 15:19:15]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-20 15:19:15] )
+[2026-03-20 15:19:19] 
+[2026-03-20 15:19:19] Join ratio / total clients: 0.1 / 50
+[2026-03-20 15:19:19] Finished creating server and clients.
+[2026-03-20 15:19:19] 
+[2026-03-20 15:19:19] -------------Round number: 0-------------
+[2026-03-20 15:19:19] 
+[2026-03-20 15:19:19] Evaluate personalized models
+[2026-03-20 15:19:29] Averaged Train Loss: 2.5069
+[2026-03-20 15:19:29] Averaged Test Accuracy: 0.0308
+[2026-03-20 15:19:29] Macro-F1: 0.0190
+[2026-03-20 15:19:29] Weighted-F1: 0.0251
+[2026-03-20 15:19:29] Balanced Accuracy: 0.1008
+[2026-03-20 15:19:29] MCC: -0.0164
+[2026-03-20 15:19:29] Cohen-Kappa: -0.0113
+[2026-03-20 15:19:29] Micro AUC: 0.3162
+[2026-03-20 15:19:29] Macro AUC: 0.4998
+[2026-03-20 15:19:29] Macro PR-AUC: 0.1040
+[2026-03-20 15:19:29] Micro FPR: 0.1077
+[2026-03-20 15:19:29] ECE: 0.0820
+[2026-03-20 15:19:29] Brier Score: 0.9113
+[2026-03-20 15:19:29] Average Confidence: 0.1127
+[2026-03-20 15:19:29] Calib Temperature: 3.0000
+[2026-03-20 15:19:29] ECE(raw): 0.1092
+[2026-03-20 15:19:29] Brier(raw): 0.9357
+[2026-03-20 15:19:29] AvgConf(raw): 0.1400
+[2026-03-20 15:19:29] EMA Test Accuracy: 0.0308
+[2026-03-20 15:19:31] ------------------------- time cost ------------------------- 12.083039045333862
+[2026-03-20 15:19:31] [Round Metrics][HGFIDSUS], selected=5, active=5, winners=0, uploaded=2, failover_used=2, contracts=0, contract_active=0.0000, contract_upload=0.0000, upload_success=0.0000, upload_per_winner=2.0000, mode_head=0.0000, affinity_update_ratio=0.2000, mean_delta_norm=0.465955, mean_delta_sparsity=0.6132, mean_bid=0.974022, mean_entropy=1.2885, mean_cred=0.8265, rep_mean=1.0000, staleness_mean=0.1000, staleness_max=1, price_compute=1.000, price_comm=1.000, avg_train_time=0.4976s, avg_send_time=0.0004s, total_upload_bytes=43232
+[2026-03-20 15:19:31] 
+[2026-03-20 15:19:31] Best accuracy.
+[2026-03-20 15:19:31] 0.030804446082520223
+[2026-03-20 15:19:31] 
+[2026-03-20 15:19:31] Average time cost per round.
+[2026-03-20 15:19:31] 12.083039045333862
+[2026-03-20 15:19:31] File path: ../results/UNSW_HGFIDSUS_smoke_patch50_0.h5
+[2026-03-20 15:19:31] 
+[2026-03-20 15:19:31] Average time cost: 16.14s.
+[2026-03-20 15:19:31] Length:  1
+[2026-03-20 15:19:31] std for best rs_test_acc: 0.0
+[2026-03-20 15:19:31] mean for best rs_test_acc: 0.030804446082520223
+[2026-03-20 15:19:31] All done!

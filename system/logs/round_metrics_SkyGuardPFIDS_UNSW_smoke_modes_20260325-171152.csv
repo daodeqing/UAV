@@ -1,0 +1,2 @@
+timestamp,round,train_loss,test_acc,macro_f1,weighted_f1,balanced_acc,macro_prauc,ece,brier,avg_conf,few_shot_recall,few_shot_macro_f1,ema_test_acc,selection_score
+2026-03-25 17:11:54,0,2.3584,0.0615,0.0,0.0889,0.1133,0.1033,0.0824,0.9097,0.1403,0.0,0.0,0.0615,0.0002

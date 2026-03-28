@@ -1,0 +1,93 @@
+[2026-03-18 13:54:00] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_HGFIDSUS_UNSW_test_20260318-135400.log
+[2026-03-18 13:54:00] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_HGFIDSUS_UNSW_test_20260318-135400.csv
+[2026-03-18 13:54:00] 
+[2026-03-18 13:54:00] ============= Running time: 0th =============
+[2026-03-18 13:54:00] Creating server and clients ...
+[2026-03-18 13:54:00] CNN1D(
+[2026-03-18 13:54:00]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-18 13:54:00]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-18 13:54:00]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-18 13:54:00]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-18 13:54:00]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-18 13:54:00]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-18 13:54:00] )
+[2026-03-18 13:54:04] 
+[2026-03-18 13:54:04] Join ratio / total clients: 1 / 50
+[2026-03-18 13:54:04] Finished creating server and clients.
+[2026-03-18 13:54:04] 
+[2026-03-18 13:54:04] -------------Round number: 0-------------
+[2026-03-18 13:54:04] 
+[2026-03-18 13:54:04] Evaluate personalized models
+[2026-03-18 14:03:23] Averaged Train Loss: 2.5069
+[2026-03-18 14:03:23] Averaged Test Accuracy: 0.0308
+[2026-03-18 14:03:23] Macro-F1: 0.0190
+[2026-03-18 14:03:23] Weighted-F1: 0.0251
+[2026-03-18 14:03:23] Balanced Accuracy: 0.1014
+[2026-03-18 14:03:23] MCC: -0.0163
+[2026-03-18 14:03:23] Cohen-Kappa: -0.0113
+[2026-03-18 14:03:23] Micro AUC: 0.3162
+[2026-03-18 14:03:23] Macro AUC: 0.4997
+[2026-03-18 14:03:23] Macro PR-AUC: 0.1040
+[2026-03-18 14:03:23] Micro FPR: 0.1077
+[2026-03-18 14:03:23] ECE: 0.1092
+[2026-03-18 14:03:23] Brier Score: 0.9357
+[2026-03-18 14:03:23] Average Confidence: 0.1400
+[2026-03-18 14:03:23] EMA Test Accuracy: 0.0308
+[2026-03-18 14:27:33] ------------------------- time cost ------------------------- 2009.3605279922485
+[2026-03-18 14:27:33] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.4000, mean_delta_norm=0.610988, mean_bid=1.065278, mean_entropy=1.3636, mean_cred=0.9196, rep_mean=1.0000, staleness_mean=1.0000, staleness_max=1, price_compute=1.000, price_comm=1.000, avg_train_time=29.0023s, avg_send_time=0.0022s, total_upload_bytes=136448
+[2026-03-18 15:00:18] ------------------------- time cost ------------------------- 1965.147127866745
+[2026-03-18 15:00:18] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.3400, mean_delta_norm=0.302116, mean_bid=0.658389, mean_entropy=1.2756, mean_cred=0.5138, rep_mean=0.9994, staleness_mean=2.0000, staleness_max=2, price_compute=1.000, price_comm=1.000, avg_train_time=34.1506s, avg_send_time=0.0028s, total_upload_bytes=136448
+[2026-03-18 15:33:05] ------------------------- time cost ------------------------- 1966.8096377849579
+[2026-03-18 15:33:05] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.3800, mean_delta_norm=0.281664, mean_bid=0.601683, mean_entropy=1.2327, mean_cred=0.4010, rep_mean=0.9994, staleness_mean=3.0000, staleness_max=3, price_compute=1.000, price_comm=1.000, avg_train_time=35.8779s, avg_send_time=0.0030s, total_upload_bytes=136448
+[2026-03-18 16:05:35] ------------------------- time cost ------------------------- 1950.0985870361328
+[2026-03-18 16:05:35] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.3800, mean_delta_norm=0.235357, mean_bid=0.586010, mean_entropy=1.1970, mean_cred=0.3522, rep_mean=0.9994, staleness_mean=4.0000, staleness_max=4, price_compute=1.000, price_comm=1.000, avg_train_time=36.6581s, avg_send_time=0.0031s, total_upload_bytes=136448
+[2026-03-18 16:39:06] ------------------------- time cost ------------------------- 2010.7966883182526
+[2026-03-18 16:39:06] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.4000, mean_delta_norm=0.211114, mean_bid=0.588843, mean_entropy=1.1731, mean_cred=0.3286, rep_mean=0.9992, staleness_mean=5.0000, staleness_max=5, price_compute=1.000, price_comm=1.000, avg_train_time=37.3689s, avg_send_time=0.0032s, total_upload_bytes=136448
+[2026-03-18 16:39:06] 
+[2026-03-18 16:39:06] -------------Round number: 5-------------
+[2026-03-18 16:39:06] 
+[2026-03-18 16:39:06] Evaluate personalized models
+[2026-03-18 16:48:58] Averaged Train Loss: 1.2299
+[2026-03-18 16:48:58] Averaged Test Accuracy: 0.7673
+[2026-03-18 16:48:58] Macro-F1: 0.4525
+[2026-03-18 16:48:58] Weighted-F1: 0.7581
+[2026-03-18 16:48:58] Balanced Accuracy: 0.4514
+[2026-03-18 16:48:58] MCC: 0.7001
+[2026-03-18 16:48:58] Cohen-Kappa: 0.6982
+[2026-03-18 16:48:58] Micro AUC: 0.9654
+[2026-03-18 16:48:58] Macro AUC: 0.8829
+[2026-03-18 16:48:58] Macro PR-AUC: 0.4842
+[2026-03-18 16:48:58] Micro FPR: 0.0259
+[2026-03-18 16:48:58] ECE: 0.3947
+[2026-03-18 16:48:58] Brier Score: 0.5310
+[2026-03-18 16:48:58] Average Confidence: 0.3726
+[2026-03-18 16:48:58] EMA Test Accuracy: 0.1781
+[2026-03-18 17:22:28] ------------------------- time cost ------------------------- 2601.5535073280334
+[2026-03-18 17:22:28] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.3400, mean_delta_norm=0.192401, mean_bid=0.616539, mean_entropy=1.1606, mean_cred=0.3239, rep_mean=0.9992, staleness_mean=6.0000, staleness_max=6, price_compute=1.050, price_comm=1.000, avg_train_time=37.8380s, avg_send_time=0.0033s, total_upload_bytes=136448
+[2026-03-18 17:56:39] ------------------------- time cost ------------------------- 2051.6251163482666
+[2026-03-18 17:56:39] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.3600, mean_delta_norm=0.176785, mean_bid=0.634480, mean_entropy=1.1532, mean_cred=0.3121, rep_mean=0.9992, staleness_mean=7.0000, staleness_max=7, price_compute=1.100, price_comm=1.000, avg_train_time=38.2937s, avg_send_time=0.0034s, total_upload_bytes=136448
+[2026-03-18 18:32:57] ------------------------- time cost ------------------------- 2177.645795583725
+[2026-03-18 18:32:57] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=0, uploaded=2, failover_used=2, upload_success=2.0000, mode_head=0.0000, affinity_update_ratio=0.4600, mean_delta_norm=0.205466, mean_bid=0.657577, mean_entropy=1.1499, mean_cred=0.3109, rep_mean=0.9992, staleness_mean=8.0000, staleness_max=8, price_compute=1.150, price_comm=1.000, avg_train_time=38.9505s, avg_send_time=0.0034s, total_upload_bytes=136448
+[2026-03-18 19:19:48] ------------------------- time cost ------------------------- 2811.467268705368
+[2026-03-18 19:19:48] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=10, uploaded=10, failover_used=0, upload_success=1.0000, mode_head=0.0000, affinity_update_ratio=0.4600, mean_delta_norm=0.157570, mean_bid=0.646179, mean_entropy=1.1292, mean_cred=0.3282, rep_mean=1.0000, staleness_mean=7.2000, staleness_max=9, price_compute=1.200, price_comm=1.000, avg_train_time=40.8693s, avg_send_time=0.0035s, total_upload_bytes=339200
+[2026-03-18 20:10:19] ------------------------- time cost ------------------------- 3030.6103386878967
+[2026-03-18 20:10:19] [Round Metrics][HGFIDSUS], selected=50, active=50, winners=10, uploaded=10, failover_used=0, upload_success=1.0000, mode_head=0.0000, affinity_update_ratio=0.3800, mean_delta_norm=0.129382, mean_bid=0.606406, mean_entropy=1.1349, mean_cred=0.3341, rep_mean=1.0010, staleness_mean=6.2000, staleness_max=10, price_compute=1.250, price_comm=1.000, avg_train_time=42.8430s, avg_send_time=0.0039s, total_upload_bytes=339200
+[2026-03-18 20:10:19] 
+[2026-03-18 20:10:19] -------------Round number: 10-------------
+[2026-03-18 20:10:19] 
+[2026-03-18 20:10:19] Evaluate personalized models
+[2026-03-18 20:18:50] Averaged Train Loss: 1.2815
+[2026-03-18 20:18:50] Averaged Test Accuracy: 0.7557
+[2026-03-18 20:18:50] Macro-F1: 0.4961
+[2026-03-18 20:18:50] Weighted-F1: 0.7589
+[2026-03-18 20:18:50] Balanced Accuracy: 0.5176
+[2026-03-18 20:18:50] MCC: 0.6913
+[2026-03-18 20:18:50] Cohen-Kappa: 0.6886
+[2026-03-18 20:18:50] Micro AUC: 0.9584
+[2026-03-18 20:18:50] Macro AUC: 0.8874
+[2026-03-18 20:18:50] Macro PR-AUC: 0.4901
+[2026-03-18 20:18:50] Micro FPR: 0.0271
+[2026-03-18 20:18:50] ECE: 0.4063
+[2026-03-18 20:18:50] Brier Score: 0.5568
+[2026-03-18 20:18:50] Average Confidence: 0.3494
+[2026-03-18 20:18:50] EMA Test Accuracy: 0.2937

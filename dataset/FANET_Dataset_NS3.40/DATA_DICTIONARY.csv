@@ -1,0 +1,118 @@
+import pandas as pd
+
+# Define the data for the DATA_DICTIONARY.csv
+data = [
+# packet_trace.csv
+["packet_trace.csv","TxTime_s","float","s","Packet transmission start time"],
+["packet_trace.csv","PacketUid","int","","Unique packet identifier"],
+["packet_trace.csv","NodeIdTx","int","","ID of the transmitting UAV node"],
+["packet_trace.csv","NodeIdDst","int","","Intended destination node ID"],
+["packet_trace.csv","TxPower_dBm","float","dBm","Transmission power level"],
+["packet_trace.csv","PacketSizeByte_tx","int","bytes","Packet size transmitted"],
+["packet_trace.csv","DataRate_Mbps","float","Mbps","Transmission data rate"],
+["packet_trace.csv","RoleOfNodeTx","string","","Role of the transmitting node (e.g., source, relay)"],
+["packet_trace.csv","RxTime_s","float","s","Reception time of the packet"],
+["packet_trace.csv","NodeIdRx","int","","ID of the receiving node"],
+["packet_trace.csv","RSSI_dBm","float","dBm","Received signal strength"],
+["packet_trace.csv","Noise_dBm","float","dBm","Measured noise power at receiver"],
+["packet_trace.csv","SNR_dB","float","dB","Signal-to-noise ratio"],
+["packet_trace.csv","RoleOfNodeRx","string","","Role of the receiving node (e.g., destination, relay)"],
+["packet_trace.csv","Link_Delay_ms","float","ms","Transmission delay between nodes"],
+["packet_trace.csv","PacketTypePrimary","string","","Primary packet type (e.g., HELLO, TC, DATA)"],
+["packet_trace.csv","PacketTypeSummary","string","","Summary or aggregated packet classification"],
+
+# network_qos_metrics.csv
+["network_qos_metrics.csv","window_start","float","s","Start time of the evaluation window"],
+["network_qos_metrics.csv","window_end","float","s","End time of the evaluation window"],
+["network_qos_metrics.csv","sent_pkts","int","","Total packets sent during the window"],
+["network_qos_metrics.csv","sent_bytes","int","bytes","Total bytes sent"],
+["network_qos_metrics.csv","recv_pkts","int","","Total packets received"],
+["network_qos_metrics.csv","recv_bytes","int","bytes","Total bytes received"],
+["network_qos_metrics.csv","avg_delay_ms","float","ms","Average end-to-end delay"],
+["network_qos_metrics.csv","jitter_ms","float","ms","Average packet delay variation"],
+["network_qos_metrics.csv","DestinationRecvDataPkts","int","","Number of data packets successfully received at destination"],
+["network_qos_metrics.csv","DestinationRecvDataBytes","int","bytes","Total data bytes received at destination"],
+["network_qos_metrics.csv","throughput_bps","float","bps","Network throughput"],
+["network_qos_metrics.csv","goodput_bps","float","bps","Useful throughput excluding overhead"],
+["network_qos_metrics.csv","ETX","float","","Expected transmission count metric"],
+["network_qos_metrics.csv","PDR","float","","Packet delivery ratio"],
+["network_qos_metrics.csv","LossRate","float","","Packet loss rate"],
+
+# node_qos_metrics.csv
+["node_qos_metrics.csv","window_start","float","s","Start time of the evaluation window"],
+["node_qos_metrics.csv","window_end","float","s","End time of the evaluation window"],
+["node_qos_metrics.csv","node_id","int","","Node identifier"],
+["node_qos_metrics.csv","sent_pkts","int","","Number of packets sent by the node"],
+["node_qos_metrics.csv","sent_bytes","int","bytes","Total bytes sent by the node"],
+["node_qos_metrics.csv","recv_pkts","int","","Number of packets received by the node"],
+["node_qos_metrics.csv","recv_bytes","int","bytes","Total bytes received by the node"],
+["node_qos_metrics.csv","avg_delay_ms","float","ms","Average delay of packets handled by the node"],
+["node_qos_metrics.csv","jitter_ms","float","ms","Jitter at node level"],
+["node_qos_metrics.csv","throughput_bps","float","bps","Node throughput"],
+["node_qos_metrics.csv","DestinationRecvDataPkts","int","","Data packets successfully received at this node"],
+["node_qos_metrics.csv","DestinationRecvDataBytes","int","bytes","Data bytes successfully received"],
+["node_qos_metrics.csv","goodput_bps","float","bps","Node-level goodput excluding control overhead"],
+
+# node_state.csv
+["node_state.csv","time","float","s","Simulation time"],
+["node_state.csv","node_id","int","","Node identifier"],
+["node_state.csv","initial_energy","float","J","Initial energy capacity"],
+["node_state.csv","remaining_energy","float","J","Remaining energy at given time"],
+["node_state.csv","data_mode","string","","Data transmission mode (e.g., CBR, video)"],
+["node_state.csv","data_rate_mbps","float","Mbps","Node data rate"],
+["node_state.csv","pos_x","float","m","X coordinate position"],
+["node_state.csv","pos_y","float","m","Y coordinate position"],
+["node_state.csv","pos_z","float","m","Altitude (Z coordinate)"],
+["node_state.csv","vel_x","float","m/s","Velocity component on X axis"],
+["node_state.csv","vel_y","float","m/s","Velocity component on Y axis"],
+["node_state.csv","vel_z","float","m/s","Velocity component on Z axis"],
+["node_state.csv","speed_m_s","float","m/s","Instantaneous node speed"],
+["node_state.csv","yaw_deg","float","°","Yaw angle orientation"],
+["node_state.csv","pitch_deg","float","°","Pitch angle orientation"],
+
+# olsr_links.csv
+["olsr_links.csv","time","float","s","Simulation time"],
+["olsr_links.csv","node_id","int","","Node identifier"],
+["olsr_links.csv","neighbor_id","int","","Neighbor node ID"],
+["olsr_links.csv","distance_m","float","m","Distance between nodes"],
+["olsr_links.csv","symmetrical_link","int","","1 if link is symmetrical, 0 otherwise"],
+
+# olsr_node_state.csv
+["olsr_node_state.csv","time","float","s","Simulation time"],
+["olsr_node_state.csv","node_id","int","","Node identifier"],
+["olsr_node_state.csv","is_mpr","int","","1 if node is MPR (Multipoint Relay), 0 otherwise"],
+["olsr_node_state.csv","one_hop_neighbors","int","","Number of one-hop neighbors"],
+["olsr_node_state.csv","sym_one_hop_neighbors","int","","Number of symmetrical one-hop neighbors"],
+["olsr_node_state.csv","two_hop_neighbors","int","","Number of two-hop neighbors"],
+["olsr_node_state.csv","sym_two_hop_neighbors","int","","Number of symmetrical two-hop neighbors"],
+["olsr_node_state.csv","mpr_set_size","int","","Size of the node’s MPR set"],
+["olsr_node_state.csv","mpr_selector_set_size","int","","Size of the MPR selector set"],
+["olsr_node_state.csv","mpr_changes","int","","Number of MPR changes over time"],
+["olsr_node_state.csv","olsr_hello_sent","int","","Number of HELLO packets sent"],
+["olsr_node_state.csv","olsr_hello_received","int","","Number of HELLO packets received"],
+["olsr_node_state.csv","olsr_tc_generated","int","","Number of topology control (TC) packets generated"],
+["olsr_node_state.csv","olsr_tc_retransmitted","int","","Number of TC packets retransmitted"],
+["olsr_node_state.csv","olsr_tc_recved","int","","Number of TC packets received"],
+
+# simulation_scenario.csv
+["simulation_scenario.csv","scenario_id","string","","Scenario identifier (e.g., S1–S8)"],
+["simulation_scenario.csv","node_density_level","string","","Density level (LOW, MEDIUM, HIGH)"],
+["simulation_scenario.csv","node_speed_level","string","","Speed category of UAVs"],
+["simulation_scenario.csv","energy_capacity_level","string","","Energy level configuration"],
+["simulation_scenario.csv","range_level","string","","Communication range category"],
+["simulation_scenario.csv","traffic_type","string","","Type of traffic used (CBR or Video)"],
+["simulation_scenario.csv","communication_Type","string","","Communication type (UAV↔UAV, UAV↔BS, or Mixed)"],
+["simulation_scenario.csv","num_source_nodes","int","","Number of source UAVs"],
+["simulation_scenario.csv","num_destination_nodes","int","","Number of destination UAVs"],
+["simulation_scenario.csv","protocol","string","","Routing protocol used (OLSR)"],
+["simulation_scenario.csv","total_time","float","s","Total simulation duration"],
+["simulation_scenario.csv","simulation_zone","string","","Simulation area dimensions (e.g., 1000×1000×1000 m)"]
+]
+
+# Create DataFrame and save
+df = pd.DataFrame(data, columns=["file_name","column_name","type","unit","description"])
+output_path = "/mnt/data/DATA_DICTIONARY.csv"
+df.to_csv(output_path, index=False)
+
+output_path
+

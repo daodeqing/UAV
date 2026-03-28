@@ -1,0 +1,56 @@
+[2026-03-25 17:11:52] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_SkyGuardPFIDS_UNSW_smoke_modes_20260325-171152.log
+[2026-03-25 17:11:52] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_SkyGuardPFIDS_UNSW_smoke_modes_20260325-171152.csv
+[2026-03-25 17:11:52] 
+[2026-03-25 17:11:52] ============= Running time: 0th =============
+[2026-03-25 17:11:52] Creating server and clients ...
+[2026-03-25 17:11:52] CNN1D(
+[2026-03-25 17:11:52]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-25 17:11:52]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-25 17:11:52]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-25 17:11:52]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-25 17:11:52]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-25 17:11:52]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-25 17:11:52] )
+[2026-03-25 17:11:53] 
+[2026-03-25 17:11:53] Join ratio / total clients: 1.0 / 5
+[2026-03-25 17:11:53] Finished creating server and clients.
+[2026-03-25 17:11:54] 
+[2026-03-25 17:11:54] -------------Round number: 0-------------
+[2026-03-25 17:11:54] 
+[2026-03-25 17:11:54] Evaluate personalized models
+[2026-03-25 17:11:54] Averaged Train Loss: 2.3584
+[2026-03-25 17:11:54] Averaged Test Accuracy: 0.0615
+[2026-03-25 17:11:54] Macro-F1: 0.0223
+[2026-03-25 17:11:54] Weighted-F1: 0.0889
+[2026-03-25 17:11:54] Balanced Accuracy: 0.1133
+[2026-03-25 17:11:54] MCC: -0.0000
+[2026-03-25 17:11:54] Cohen-Kappa: -0.0000
+[2026-03-25 17:11:54] Micro AUC: 0.4796
+[2026-03-25 17:11:54] Macro AUC: 0.5163
+[2026-03-25 17:11:54] Macro PR-AUC: 0.1033
+[2026-03-25 17:11:54] Micro FPR: 0.1043
+[2026-03-25 17:11:54] ECE: 0.0824
+[2026-03-25 17:11:54] Brier Score: 0.9097
+[2026-03-25 17:11:54] Average Confidence: 0.1403
+[2026-03-25 17:11:54] EMA Test Accuracy: 0.0615
+[2026-03-25 17:11:54] Few-shot Recall: 0.0000
+[2026-03-25 17:11:54] Few-shot Macro-F1: 0.0000
+[2026-03-25 17:11:54] Selection Score (multi_objective): 0.0002
+[2026-03-25 17:11:54] Checkpoint Updated: round 0
+[2026-03-25 17:11:57] ------------------------- time cost ------------------------- 3.200731039047241
+[2026-03-25 17:11:57] [Round Metrics][SGEFIDSUS], selected=5, active=3, winners=1, uploaded=1, failover_used=0, contracts=1, contract_active=0.3333, contract_upload=1.0000, upload_success=1.0000, upload_per_winner=1.0000, mode_full=0.3333, mode_freeze=0.0000, mode_head=0.6667, affinity_update_ratio=0.6667, mean_delta_norm=0.138581, mean_delta_sparsity=0.6743, mean_bid=0.518555, mean_entropy=2.1833, mean_cred=0.4630, rep_mean=1.0010, staleness_mean=0.4000, staleness_max=1, price_compute=2.000, price_comm=1.000, avg_train_time=0.2839s, avg_send_time=0.0013s, total_upload_bytes=28416, selection_score=0.0002
+[2026-03-25 17:11:57] [Proto Metrics][SGEFIDSUS] global_proto_classes=10, global_proto_samples=5183, few_shot_classes=4, client_few_shot_ratio=0.0215
+[2026-03-25 17:11:57] [SkyGuard Metrics] participation_mean=0.9605, participation_std=0.0243, uav_utility=0.5186, shapley_proxy=0.6674, grad_similarity=0.0000, data_quality=0.5334, resource_score=0.6832, attack_score=0.5865, adapter_drift=0.000680, global_drift_pressure=0.0000, drift_alert_ratio=0.0000, clusters=1
+[2026-03-25 17:11:57] 
+[2026-03-25 17:11:57] Best accuracy.
+[2026-03-25 17:11:57] 0.06149169978957213
+[2026-03-25 17:11:57] 
+[2026-03-25 17:11:57] Average time cost per round.
+[2026-03-25 17:11:57] 3.200731039047241
+[2026-03-25 17:11:57] File path: ../results/UNSW_SkyGuardPFIDS_smoke_modes_0.h5
+[2026-03-25 17:11:57] 
+[2026-03-25 17:11:57] Average time cost: 4.39s.
+[2026-03-25 17:11:57] Length:  1
+[2026-03-25 17:11:57] std for best rs_test_acc: 0.0
+[2026-03-25 17:11:57] mean for best rs_test_acc: 0.06149169978957213
+[2026-03-25 17:11:57] All done!

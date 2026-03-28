@@ -1,0 +1,13 @@
+[2026-03-20 15:18:29] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_HGFIDSUS_UNSW_smoke_patch_20260320-151829.log
+[2026-03-20 15:18:29] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_HGFIDSUS_UNSW_smoke_patch_20260320-151829.csv
+[2026-03-20 15:18:29] 
+[2026-03-20 15:18:29] ============= Running time: 0th =============
+[2026-03-20 15:18:29] Creating server and clients ...
+[2026-03-20 15:18:29] CNN1D(
+[2026-03-20 15:18:29]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-20 15:18:29]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-20 15:18:29]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-20 15:18:29]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-20 15:18:29]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-20 15:18:29]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-20 15:18:29] )

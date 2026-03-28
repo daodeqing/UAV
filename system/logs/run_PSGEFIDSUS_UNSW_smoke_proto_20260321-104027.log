@@ -1,0 +1,37 @@
+[2026-03-21 10:40:27] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_PSGEFIDSUS_UNSW_smoke_proto_20260321-104027.log
+[2026-03-21 10:40:27] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_PSGEFIDSUS_UNSW_smoke_proto_20260321-104027.csv
+[2026-03-21 10:40:27] 
+[2026-03-21 10:40:27] ============= Running time: 0th =============
+[2026-03-21 10:40:27] Creating server and clients ...
+[2026-03-21 10:40:27] CNN1D(
+[2026-03-21 10:40:27]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-21 10:40:27]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-21 10:40:27]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-21 10:40:27]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-21 10:40:27]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-21 10:40:27]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-21 10:40:27] )
+[2026-03-21 10:40:28] 
+[2026-03-21 10:40:28] Join ratio / total clients: 0.6 / 5
+[2026-03-21 10:40:28] Finished creating server and clients.
+[2026-03-21 10:40:28] 
+[2026-03-21 10:40:28] -------------Round number: 0-------------
+[2026-03-21 10:40:28] 
+[2026-03-21 10:40:28] Evaluate personalized models
+[2026-03-21 10:40:29] Averaged Train Loss: 2.3645
+[2026-03-21 10:40:29] Averaged Test Accuracy: 0.0472
+[2026-03-21 10:40:29] Macro-F1: 0.0184
+[2026-03-21 10:40:29] Weighted-F1: 0.0706
+[2026-03-21 10:40:29] Balanced Accuracy: 0.0950
+[2026-03-21 10:40:29] MCC: 0.0015
+[2026-03-21 10:40:29] Cohen-Kappa: 0.0010
+[2026-03-21 10:40:29] Micro AUC: 0.4719
+[2026-03-21 10:40:29] Macro AUC: 0.5106
+[2026-03-21 10:40:29] Macro PR-AUC: 0.1030
+[2026-03-21 10:40:29] Micro FPR: 0.1059
+[2026-03-21 10:40:29] ECE: 0.0974
+[2026-03-21 10:40:29] Brier Score: 0.9113
+[2026-03-21 10:40:29] Average Confidence: 0.1409
+[2026-03-21 10:40:29] EMA Test Accuracy: 0.0472
+[2026-03-21 10:40:29] Few-shot Recall: 0.0000
+[2026-03-21 10:40:29] Few-shot Macro-F1: 0.0000

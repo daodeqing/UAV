@@ -1,0 +1,79 @@
+﻿*** Begin Patch
+*** Update File: e:\zuhui\HGFIDSUS-main\system\flcore\clients\clientHGFIDSUS.py
+@@
+     def _build_delta_and_bid(self, val_loader):
+         # Delta for base only
+         delta_list = []
+@@
+         # Approximate delta payload size (float32)
+         self.delta_size = int(sum(p.numel() for p in self.model.base.parameters()) * 4)
+ 
+-        # Value estimate: validation loss drop + drift + staleness bonus
+-        loss_before = self._recalculate_loss(self.old_model, val_loader)
+-        loss_after = self._recalculate_loss(self.model, val_loader)
+-        loss_drop = max(0.0, float(loss_before - loss_after))
+-        self.last_val_loss = float(loss_after)
++        # FAST proxy for loss drop (eliminates 2 full validation loops)
++        # FIDSUS doesn't do multiple validations, doing so doubles run time.
++        loss_drop = float(self.delta_norm * 0.1)
++        self.last_val_loss = getattr(self, "_cached_baseline_loss", 0.0)
+ 
+         staleness_term = float(self.server_staleness) / float(1.0 + self.server_staleness)
+ 
+@@
+     def weight_cal(self, val_loader):
+         if len(self.received_models) == 0:
+             self.weight_vector = torch.zeros(self.num_clients, device=self.device)
++            self._cached_baseline_loss = self._recalculate_loss(self.old_model, val_loader)
+             return torch.tensor([])
+ 
+         weight_list = []
+         baseline = self._recalculate_loss(self.old_model, val_loader)
++        self._cached_baseline_loss = baseline
+         for received_model in self.received_models:
+             params_dif = []
+@@
+         if label in protos_g and label in protos_per:
+             pg = protos_g[label]
+             pp = protos_per[label]
+-            mmd = _mmd_rbf_1d(pg.view(-1), pp.view(-1), device=device)
+-            alpha = float(torch.exp(-mmd).clamp(0.0, 1.0).item())
++            
++            # FAST L2-based alpha instead of O(d^2) MMD computation
++            dist = torch.norm(pg.view(-1) - pp.view(-1)).item()
++            alpha = float(np.exp(-dist / 10.0))
++            alpha = max(0.0, min(1.0, alpha))
++            
+             fused[label] = alpha * pg + (1.0 - alpha) * pp
+         elif label in protos_g:
+@@
+-def _mmd_rbf_1d(x: torch.Tensor, y: torch.Tensor, device: str = "cpu") -> torch.Tensor:
+-    # Lightweight MMD for 1D feature vectors; scalar output.
+-    x = x.to(device)
+-    y = y.to(device)
+-    # Use a small set of bandwidths for stability.
+-    sigmas = [10.0, 15.0, 20.0]
+-
+-    def _rbf(d2, sigma):
+-        return torch.exp(-0.5 * d2 / (sigma * sigma))
+-
+-    # Pairwise squared distances (vector treated as samples of size 1)
+-    xx = x.unsqueeze(1) - x.unsqueeze(0)
+-    yy = y.unsqueeze(1) - y.unsqueeze(0)
+-    xy = x.unsqueeze(1) - y.unsqueeze(0)
+-
+-    dxx = xx * xx
+-    dyy = yy * yy
+-    dxy = xy * xy
+-
+-    kxx = 0.0
+-    kyy = 0.0
+-    kxy = 0.0
+-    for s in sigmas:
+-        kxx = kxx + _rbf(dxx, s)
+-        kyy = kyy + _rbf(dyy, s)
+-        kxy = kxy + _rbf(dxy, s)
+-
+-    return torch.mean(kxx + kyy - 2.0 * kxy)
+*** End Patch
+

@@ -1,0 +1,2 @@
+scenario_id,node_density_level,node_speed_level,energy_capacity_level,range_level,traffic_type,communication_Type,num_source_nodes,num_destination_nodes,protocol,total_time,simulation_zone
+7,HIGH,MEDIUM,HIGH,LOW,VIDEO,Hybrid (UAV <-> UAV + UAV -> Base),10,6,OLSR,200,1000x1000x200

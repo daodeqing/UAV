@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+title: "FANET Dataset: UAV Communication Scenarios in NS-3.40"
+message: "If you use this dataset, please cite it using the following information."
+type: dataset
+
+authors:
+  - family-names: "Moussaoui"
+    given-names: "Ali"
+    affiliation: "Department of Computer Science, Intelligent Systems and Cognitive Computing (ISCC) Laboratory, University Mohamed El Bachir El Ibrahimi, Bordj Bou Arréridj, Algeria"
+    orcid: "https://orcid.org/0000-0001-8403-7190"
+
+abstract: >
+  This dataset provides a comprehensive collection of simulation data for Flying Ad hoc Networks (FANETs),
+  generated using NS-3.40. It includes packet-level traces, node states, QoS metrics, and OLSR routing information
+  for eight distinct UAV communication scenarios with varying node densities, mobility levels, energy capacities,
+  and transmission ranges. The dataset aims to support research on UAV communication behavior, QoS analysis,
+  and AI-based routing in FANET environments.
+
+date-released: "2025-11-06"
+version: "1.0"
+license: "CC-BY-4.0"
+
+repository-code: "https://zenodo.org/record/xxxxxx"
+doi: "10.xxxx/zenodo.xxxxxx"
+
+keywords:
+  - FANET
+  - UAV
+  - NS-3.40
+  - Ad hoc Networks
+  - QoS
+  - OLSR
+  - Dataset
+  - Wireless Communication
+
+preferred-citation:
+  type: dataset
+  authors:
+    - family-names: "Moussaoui"
+      given-names: "Ali"
+  title: "FANET Dataset: UAV Communication Scenarios in NS-3.40"
+  year: 2025
+  doi: "10.xxxx/zenodo.xxxxxx"
+  repository: "Zenodo"
+  version: "1.0"
+  license: "CC-BY-4.0"
+

@@ -1,0 +1,2 @@
+scenario_id,node_density_level,node_speed_level,energy_capacity_level,range_level,traffic_type,communication_Type,num_source_nodes,num_destination_nodes,protocol,total_time,simulation_zone
+3,MEDIUM,MEDIUM,MEDIUM,MEDIUM,CBR,UAV <-> Base_Station,10,1,OLSR,200,1000x1000x200

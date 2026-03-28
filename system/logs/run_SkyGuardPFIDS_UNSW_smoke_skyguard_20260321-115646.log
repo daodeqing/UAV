@@ -1,0 +1,43 @@
+[2026-03-21 11:56:46] Run log: E:\zuhui\HGFIDSUS-main2.1\system\logs\run_SkyGuardPFIDS_UNSW_smoke_skyguard_20260321-115646.log
+[2026-03-21 11:56:46] Round metrics CSV: E:\zuhui\HGFIDSUS-main2.1\system\logs\round_metrics_SkyGuardPFIDS_UNSW_smoke_skyguard_20260321-115646.csv
+[2026-03-21 11:56:46] 
+[2026-03-21 11:56:46] ============= Running time: 0th =============
+[2026-03-21 11:56:46] Creating server and clients ...
+[2026-03-21 11:56:46] CNN1D(
+[2026-03-21 11:56:46]   (conv1): Conv1d(1, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-21 11:56:46]   (conv2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+[2026-03-21 11:56:46]   (maxpool): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+[2026-03-21 11:56:46]   (global_maxpool): AdaptiveMaxPool1d(output_size=1)
+[2026-03-21 11:56:46]   (dropout): Dropout(p=0.2, inplace=False)
+[2026-03-21 11:56:46]   (fc): Linear(in_features=64, out_features=10, bias=True)
+[2026-03-21 11:56:46] )
+[2026-03-21 11:56:47] 
+[2026-03-21 11:56:47] Join ratio / total clients: 1.0 / 5
+[2026-03-21 11:56:47] Finished creating server and clients.
+[2026-03-21 11:56:53] 
+[2026-03-21 11:56:53] -------------Round number: 0-------------
+[2026-03-21 11:56:53] 
+[2026-03-21 11:56:53] Evaluate personalized models
+[2026-03-21 11:58:24] Averaged Train Loss: 2.3584
+[2026-03-21 11:58:24] Averaged Test Accuracy: 0.0615
+[2026-03-21 11:58:24] Macro-F1: 0.0223
+[2026-03-21 11:58:24] Weighted-F1: 0.0889
+[2026-03-21 11:58:24] Balanced Accuracy: 0.1133
+[2026-03-21 11:58:24] MCC: -0.0000
+[2026-03-21 11:58:24] Cohen-Kappa: -0.0000
+[2026-03-21 11:58:24] Micro AUC: 0.4796
+[2026-03-21 11:58:24] Macro AUC: 0.5163
+[2026-03-21 11:58:24] Macro PR-AUC: 0.1033
+[2026-03-21 11:58:24] Micro FPR: 0.1043
+[2026-03-21 11:58:24] ECE: 0.0578
+[2026-03-21 11:58:24] Brier Score: 0.9019
+[2026-03-21 11:58:24] Average Confidence: 0.1129
+[2026-03-21 11:58:24] Calib Temperature: 3.0000
+[2026-03-21 11:58:24] Calib Samples: 1709
+[2026-03-21 11:58:24] ECE(raw): 0.0824
+[2026-03-21 11:58:24] Brier(raw): 0.9097
+[2026-03-21 11:58:24] AvgConf(raw): 0.1403
+[2026-03-21 11:58:24] EMA Test Accuracy: 0.0615
+[2026-03-21 11:58:24] Few-shot Recall: 0.0000
+[2026-03-21 11:58:24] Few-shot Macro-F1: 0.0000
+[2026-03-21 12:01:08] ------------------------- time cost ------------------------- 255.1265368461609
